@@ -1,10 +1,20 @@
 import React from 'react'
+import { BeatLoader, BounceLoader } from 'react-spinners'
+import Layout from './Layout'
 
 function Loading() {
     return (
-        <div>
-            Loading...
-        </div>
+        <Layout header>
+            <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                height: '100vh'
+            }}>
+                <BeatLoader loading color='#212529' size={50}></BeatLoader>
+                {/* <BounceLoader loading color='orange' size={50}></BounceLoader> */}
+            </div>
+        </Layout>
     )
 }
 

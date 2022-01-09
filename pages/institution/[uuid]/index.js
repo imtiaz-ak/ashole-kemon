@@ -9,7 +9,7 @@ import ReviewCard from '../../../components/ReviewCard'
 import Layout from '../../../components/Layout'
 
 function index() {
-    const [institution, setInstitution] = useState(null)
+    const [institution, setInstitution] = useState()
     const [reviewList, setReviewList] = useState([])
     const [loading, setLoading] = useState(true)
     const router = useRouter()
@@ -32,7 +32,8 @@ function index() {
                 .from('institutions')
                 .select('*')
                 .eq('id', uuid)
-            setInstitution(institution)
+            setInstitution(...institution)
+            // console.log(...institution);
 
             if (institutionError) {
                 console.log(institutionError)
@@ -59,20 +60,29 @@ function index() {
     } else {
         return (
             <Layout>
-                Institution page
-                <button onClick={handleSuggestChange}>Suggest Change</button>
-                <button onClick={handleAddReview}>Add Review</button>
+                {/* <button onClick={handleSuggestChange}>Suggest Change</button> */}
                 {
-                    institution ?
-                        <InstitutionCard name={institution.name} rating={institution.rating} location={institution.location} />
+                    institution ? (
+                        <InstitutionCard name={institution.name} rating={institution.rating} location={institution.location} handleSuggestChange={handleSuggestChange} />)
                         :
                         <></>
                 }
-                {
-                    reviewList.map((item) => (
-                        <ReviewCard key={item.id} uuid={item.id} rating={item.rating} pros={item.pros} cons={item.cons} />
-                    ))
-                }
+                <div className='d-flex justify-content-center my-3'>
+                    <button onClick={handleAddReview} className="btn btn-success btn-lg">Add Review</button>
+                </div>
+
+                <div className='row' style={{ justifyContent: 'center' }}>
+
+                    <div className="card mb-5 mt-2" style={{ width: '50rem' }}>
+                        <h2 className="card-title mt-2" style={{ textAlign: 'center' }}>Reviews</h2>
+
+                        {
+                            reviewList.map((item) => (
+                                <ReviewCard key={item.id} uuid={item.id} rating={item.rating} pros={item.pros} cons={item.cons} />
+                            ))
+                        }
+                    </div>
+                </div>
             </Layout>
         )
     }

@@ -8,8 +8,18 @@ function review_sent() {
 
     return (
         <Layout>
-            <p>Review has been sent.</p>
-            <Link href={`/institution/${router.query.uuid}`}><a>Go back to reviews</a></Link>
+            <div className="d-flex mt-3" style={{
+                flexDirection: 'column',
+                justifyContent: 'center',
+                textAlign: 'center',
+                alignItems: 'center',
+                fontSize: '22px',
+            }}>
+                <p >Review has been sent.</p>
+                <Link href={`/institution/${router.query.uuid}`}>
+                    <button className='btn btn-secondary'>Go back to reviews</button>
+                </Link>
+            </div>
         </Layout>
     )
 }

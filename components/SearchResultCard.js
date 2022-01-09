@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Rating from './Rating'
 
 export default function SearchResultCard({ uuid, name, location, rating }) {
     return (
@@ -15,13 +16,13 @@ export default function SearchResultCard({ uuid, name, location, rating }) {
             />
             <div className="card-body">
                 <h3 className="card-title">{name}</h3>
-                <p className="card-text">{location}</p>
+                <p className="card-text my-2">{location}</p>
 
                 {/* Star diye - like fashionista */}
-                <p>{`(${rating})`}</p>
+                <Rating value={rating} text={`(${rating})`}></Rating>
 
                 <Link href={`/institution/${uuid}/`}>
-                    <button className="btn btn-primary">View Details</button>
+                    <button className="btn btn-primary mt-3">View Details</button>
                 </Link>
             </div>
         </div>

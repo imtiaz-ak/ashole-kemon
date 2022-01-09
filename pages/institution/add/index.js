@@ -21,13 +21,13 @@ function add() {
             <div className='row justify-content-center'>
                 <div className="card col-md-6 shadow mt-4">
                     <div className="card-body">
-                        <h3 className="card-title mb-4">Suggest Change</h3>
+                        <h3 className="card-title mb-4">Add New Institution</h3>
                         <form onSubmit={handleSubmit}>
                             <div className="form-group">
                                 <label>Name</label>
                                 <textarea
                                     className="form-control my-2"
-                                    placeholder="Write a suggestion"
+                                    placeholder="Name of the institution"
                                     type="text"
                                     value={name}
                                     onChange={(e) => { setName(e.target.value) }}
@@ -37,7 +37,7 @@ function add() {
                                 <label>Location</label>
                                 <textarea
                                     className="form-control my-2"
-                                    placeholder="Give a reason"
+                                    placeholder="Location of the institution"
                                     type="text"
                                     value={location}
                                     onChange={(e) => { setLocation(e.target.value) }}
@@ -47,7 +47,7 @@ function add() {
                                 <label>Image</label>
                                 <input
                                     className="form-control my-2"
-                                    placeholder="Give a reason"
+                                    placeholder="Give a image"
                                     type="text"
                                     value={imageURL}
                                     onChange={(e) => { setImageURL(e.target.value) }}

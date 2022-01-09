@@ -20,13 +20,13 @@ function review() {
             <div className='row justify-content-center'>
                 <div className="card col-md-6 shadow mt-4">
                     <div className="card-body">
-                        <h3 className="card-title mb-4">Suggest Change</h3>
+                        <h3 className="card-title mb-4">Add Review</h3>
                         <form onSubmit={handleSubmit}>
                             <div className="form-group">
                                 <label>Pros</label>
                                 <textarea
                                     className="form-control my-2"
-                                    placeholder="Write a suggestion"
+                                    placeholder="Write a pros"
                                     type="text"
                                     value={pros}
                                     onChange={(e) => { setPros(e.target.value) }}
@@ -36,7 +36,7 @@ function review() {
                                 <label>Cons</label>
                                 <textarea
                                     className="form-control my-2"
-                                    placeholder="Give a reason"
+                                    placeholder="Write a cons"
                                     type="text"
                                     value={cons}
                                     onChange={(e) => { setCons(e.target.value) }}
@@ -46,7 +46,7 @@ function review() {
                                 <label>Rating</label>
                                 <input
                                     className="form-control my-2"
-                                    placeholder="Give a reason"
+                                    placeholder="Give a rating"
                                     type="number"
                                     value={rating}
                                     onChange={(e) => { setRating(e.target.value) }}

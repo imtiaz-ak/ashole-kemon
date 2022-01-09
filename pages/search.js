@@ -40,7 +40,7 @@ export default function Search() {
                     color: 'red',
                     textAlign: 'center'
                 }}>
-                    <h3 className='my-3 mb-4' style={{ fontWeight: '400' }}>No institution found. Try searching with a different keyword or</h3>
+                    <h4 className='my-3 mb-4' style={{ fontWeight: '400' }}>No institution found. Try searching with a different keyword or</h4>
                     <Link href='/institution/add'><button className='btn btn-success mb-3'>Add New Institution</button></Link>
                 </div>
             ) : null}
