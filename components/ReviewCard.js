@@ -148,7 +148,7 @@ export default function ReviewCard({ uuid, rating, pros, cons, upvotes, downvote
                 <div className="d-flex justify-content-end">
                     <button className={upvoted ? 'btn btn-success me-1' : 'btn btn-outline-success me-1'} onClick={handleUpvoteClick}>
                         <i class={upvoted ? "fas fa-thumbs-up pe-1" : 'far fa-thumbs-up pe-1'}></i>
-                        upvote <p>{upvotes}</p>
+                        upvote: <b>{upvotes}</b>
                     </button>
                     {/* {
                     downvoted ?
@@ -157,7 +157,7 @@ export default function ReviewCard({ uuid, rating, pros, cons, upvotes, downvote
                 } */}
                     <button className={downvoted ? 'btn btn-danger' : 'btn btn-outline-danger'} onClick={handleDownvoteClick}>
                         <i class={downvoted ? "fas fa-thumbs-down pe-1" : 'far fa-thumbs-down pe-1'}></i>
-                        downvote <p>{upvotes}</p>
+                        downvote: <b>{upvotes}</b>
                     </button>
                 </div>
             </div>

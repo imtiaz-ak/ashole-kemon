@@ -11,7 +11,7 @@ function Loading() {
                 justifyContent: 'center',
                 height: '100vh'
             }}>
-                <BeatLoader loading color='#212529' size={50}></BeatLoader>
+                <BeatLoader loading color='#212529' size={40}></BeatLoader>
                 {/* <BounceLoader loading color='orange' size={50}></BounceLoader> */}
             </div>
         </Layout>
