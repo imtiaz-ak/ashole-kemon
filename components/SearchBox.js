@@ -23,10 +23,10 @@ export default function SearchBox({ homePage }) {
             height: '60vh',
             alignItems: 'center',
             flexDirection: 'column',
-            width: '750px'
+            maxWidth: '750px'
         } : {
             alignItems: 'center',
-            width: '750px',
+            maxWidth: '750px',
             flexDirection: 'column',
         }}
         >
