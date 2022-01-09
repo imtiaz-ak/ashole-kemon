@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import supabase from "../utils/supabase"
 
-export default function ReviewCard({ uuid, rating, pros, cons }) {
+export default function ReviewCard({ uuid, rating, pros, cons, upvotes, downvotes }) {
     const [upvoted, setUpvoted] = useState(false)
     const [downvoted, setDownvoted] = useState(false)
 

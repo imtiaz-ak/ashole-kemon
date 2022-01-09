@@ -78,7 +78,7 @@ function index() {
 
                         {
                             reviewList.map((item) => (
-                                <ReviewCard key={item.id} uuid={item.id} rating={item.rating} pros={item.pros} cons={item.cons} />
+                                <ReviewCard key={item.id} uuid={item.id} rating={item.rating} pros={item.pros} cons={item.cons} upvotes={item.upvotes} downvotes={item.downvotes}/>
                             ))
                         }
                     </div>
