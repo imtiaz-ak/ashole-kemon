@@ -16,7 +16,7 @@ function suggestion_sent() {
                 alignItems: 'center',
                 fontSize: '22px',
             }}>
-                <p >Suggestion has been sent.</p>
+                <p >Thank you for your suggestion. Your feedback helps us keep the information up to date.</p>
                 <Link href={`/institution/${router.query.uuid}`}>
                     <button className='btn btn-secondary'>Go back to reviews</button>
                 </Link>

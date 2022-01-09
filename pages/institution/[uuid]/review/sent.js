@@ -15,7 +15,7 @@ function review_sent() {
                 alignItems: 'center',
                 fontSize: '22px',
             }}>
-                <p >Review has been sent.</p>
+                <p >Thank you for submitting a review. It will be automatically be processed and added to the website</p>
                 <Link href={`/institution/${router.query.uuid}`}>
                     <button className='btn btn-secondary'>Go back to reviews</button>
                 </Link>

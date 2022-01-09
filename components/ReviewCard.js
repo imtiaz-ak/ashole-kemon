@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import supabase from "../utils/supabase"
 
-export default function ReviewCard({ uuid, rating, pros, cons, upvotes, downvotes }) {
+export default function ReviewCard({ uuid, rating, pros, cons, upvotes, downvotes, hashed_ip_address, hashed_user_agent }) {
     const [upvoted, setUpvoted] = useState(false)
     const [downvoted, setDownvoted] = useState(false)
 
@@ -66,7 +66,7 @@ export default function ReviewCard({ uuid, rating, pros, cons, upvotes, downvote
         const { data, error } = await supabase
             .from('review_votes')
             .insert([
-                { for_review: uuid, helpful_review: true, select: true, ip_address: 'abcd', 'user_agent': 'asd' },
+                { for_review: uuid, helpful_review: true, select: true, ip_address: hashed_ip_address, 'user_agent': hashed_user_agent },
             ])
     }
 
@@ -148,7 +148,7 @@ export default function ReviewCard({ uuid, rating, pros, cons, upvotes, downvote
                 <div className="d-flex justify-content-end">
                     <button className={upvoted ? 'btn btn-success me-1' : 'btn btn-outline-success me-1'} onClick={handleUpvoteClick}>
                         <i class={upvoted ? "fas fa-thumbs-up pe-1" : 'far fa-thumbs-up pe-1'}></i>
-                        upvote: <b>{upvotes}</b>
+                        helpful: <b>{upvoted? upvotes+1 : upvotes}</b>
                     </button>
                     {/* {
                     downvoted ?
@@ -157,7 +157,7 @@ export default function ReviewCard({ uuid, rating, pros, cons, upvotes, downvote
                 } */}
                     <button className={downvoted ? 'btn btn-danger' : 'btn btn-outline-danger'} onClick={handleDownvoteClick}>
                         <i class={downvoted ? "fas fa-thumbs-down pe-1" : 'far fa-thumbs-down pe-1'}></i>
-                        downvote: <b>{upvotes}</b>
+                        not helpful: <b>{downvoted? downvotes+1: downvotes}</b>
                     </button>
                 </div>
             </div>

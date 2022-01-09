@@ -13,7 +13,7 @@ function suggestion_sent() {
                 alignItems: 'center',
                 fontSize: '22px',
             }}>
-                <p >Institution will be added after a review process</p>
+                <p >Thank you for your suggestion. The institution will be added after going through a manual review process</p>
                 <Link href={'/search'}>
 
                     <button className='btn btn-secondary'>Go back to search</button>

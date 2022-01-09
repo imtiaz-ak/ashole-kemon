@@ -27,7 +27,7 @@ function add() {
                                 <label>Name</label>
                                 <textarea
                                     className="form-control my-2"
-                                    placeholder="Name of the institution"
+                                    placeholder="Type the name"
                                     type="text"
                                     value={name}
                                     onChange={(e) => { setName(e.target.value) }}
@@ -37,7 +37,7 @@ function add() {
                                 <label>Location</label>
                                 <textarea
                                     className="form-control my-2"
-                                    placeholder="Location of the institution"
+                                    placeholder="Type the location"
                                     type="text"
                                     value={location}
                                     onChange={(e) => { setLocation(e.target.value) }}
@@ -47,7 +47,7 @@ function add() {
                                 <label>Image</label>
                                 <input
                                     className="form-control my-2"
-                                    placeholder="Give a image"
+                                    placeholder="Add url of the logo (optional)"
                                     type="text"
                                     value={imageURL}
                                     onChange={(e) => { setImageURL(e.target.value) }}

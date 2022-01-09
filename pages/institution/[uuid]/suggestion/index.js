@@ -25,7 +25,7 @@ function suggestion() {
                                 <label>Suggestion</label>
                                 <textarea
                                     className="form-control my-2"
-                                    placeholder="Write a suggestion"
+                                    placeholder="Describe the change"
                                     type="text"
                                     value={suggestion}
                                     onChange={(e) => { setSuggestion(e.target.value) }}
@@ -35,7 +35,7 @@ function suggestion() {
                                 <label>Reason</label>
                                 <textarea
                                     className="form-control my-2"
-                                    placeholder="Give a reason"
+                                    placeholder="Describe a reason for the change"
                                     type="text"
                                     value={reason}
                                     onChange={(e) => { setReason(e.target.value) }}
