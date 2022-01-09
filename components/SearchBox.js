@@ -30,9 +30,9 @@ export default function SearchBox({ homePage }) {
             flexDirection: 'column',
         }}
         >
-            <h2 className='mb-5' style={{ textAlign: 'center', fontFamily: 'Roboto, sans-serif' }}>Read Anonymous Reviews Before You Decide Where To Study</h2>
+            <h2 className='' style={homePage ? { textAlign: 'center', fontFamily: 'Roboto, sans-serif' } : { display: 'none' }}>Read Anonymous Reviews Before You Decide Where To Study</h2>
 
-            <form onSubmit={handleSearch} className="d-flex container align-center justify-content-center input-group-lg">
+            <form onSubmit={handleSearch} className="d-flex container align-center justify-content-center input-group-lg my-3 mt-4">
 
                 <input
                     className="form-control"

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import supabase from "../utils/supabase"
 
-export default function ReviewCard({ uuid, rating, pros, cons }) {
+export default function ReviewCard({ uuid, rating, pros, cons, upvotes, downvotes }) {
     const [upvoted, setUpvoted] = useState(false)
     const [downvoted, setDownvoted] = useState(false)
 
@@ -148,7 +148,7 @@ export default function ReviewCard({ uuid, rating, pros, cons }) {
                 <div className="d-flex justify-content-end">
                     <button className={upvoted ? 'btn btn-success me-1' : 'btn btn-outline-success me-1'} onClick={handleUpvoteClick}>
                         <i class={upvoted ? "fas fa-thumbs-up pe-1" : 'far fa-thumbs-up pe-1'}></i>
-                        upvote
+                        upvote <p>{upvotes}</p>
                     </button>
                     {/* {
                     downvoted ?
@@ -157,7 +157,7 @@ export default function ReviewCard({ uuid, rating, pros, cons }) {
                 } */}
                     <button className={downvoted ? 'btn btn-danger' : 'btn btn-outline-danger'} onClick={handleDownvoteClick}>
                         <i class={downvoted ? "fas fa-thumbs-down pe-1" : 'far fa-thumbs-down pe-1'}></i>
-                        downvote
+                        downvote <p>{upvotes}</p>
                     </button>
                 </div>
             </div>
