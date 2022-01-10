@@ -49,6 +49,7 @@ function index({ ip }) {
                 .from('reviews')
                 .select('*')
                 .eq('for_institution', uuid)
+                .eq('published', true)
             reviews.sort((a, b) => (a.upvotes < b.upvotes) ? 1 : -1)
             setReviewList(reviews)
 
