@@ -75,7 +75,7 @@ export default function ReviewCard({ uuid, rating, pros, cons, upvotes, downvote
         const { data, error } = await supabase
             .from('review_votes')
             .insert([
-                { for_review: uuid, helpful_review: true, select: false, ip_address: 'abcd', 'user_agent': 'asd' },
+                { for_review: uuid, helpful_review: true, select: false, ip_address: hashed_ip_address, 'user_agent': hashed_user_agent },
             ])
     }
 
@@ -84,7 +84,7 @@ export default function ReviewCard({ uuid, rating, pros, cons, upvotes, downvote
         const { data, error } = await supabase
             .from('review_votes')
             .insert([
-                { for_review: uuid, helpful_review: false, select: true, ip_address: 'abcd', 'user_agent': 'asd' },
+                { for_review: uuid, helpful_review: false, select: true, ip_address: hashed_ip_address, 'user_agent': hashed_user_agent },
             ])
     }
 
@@ -93,7 +93,7 @@ export default function ReviewCard({ uuid, rating, pros, cons, upvotes, downvote
         const { data, error } = await supabase
             .from('review_votes')
             .insert([
-                { for_review: uuid, helpful_review: false, select: false, ip_address: 'abcd', 'user_agent': 'asd' },
+                { for_review: uuid, helpful_review: false, select: false, ip_address: hashed_ip_address, 'user_agent': hashed_user_agent },
             ])
     }
 
