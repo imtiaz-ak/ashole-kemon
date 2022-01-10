@@ -7,18 +7,12 @@ const ROUNDS = 3
 
 module.exports = async (req, res) => {
 
-    const ip = req.socket.remoteAddress
+    const ip = req.haeders['x-vercel-forwarded-for']
     const user_agent = req.headers['user-agent']
     const for_institution = req.body['for_institution']
     const rating = parseInt(req.body['rating'])
     const pros = req.body['pros']
     const cons = req.body['cons']
-
-    console.log('headers')
-    console.log(req.headers)
-
-    console.log('the ip address i track')
-    console.log(req.socket.remoteAddress)
 
     const hash_text = (rawText) => {
         let hashed = md5(rawText + SALT);
