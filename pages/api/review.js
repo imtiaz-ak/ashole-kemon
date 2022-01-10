@@ -14,6 +14,12 @@ module.exports = async (req, res) => {
     const pros = req.body['pros']
     const cons = req.body['cons']
 
+    console.log('headers')
+    console.log(req.headers)
+
+    console.log('the ip address i track')
+    console.log(req.socket.remoteAddress)
+
     const hash_text = (rawText) => {
         let hashed = md5(rawText + SALT);
         for (let i = 0; i <= ROUNDS; i++) {
