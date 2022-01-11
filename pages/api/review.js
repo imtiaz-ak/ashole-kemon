@@ -7,7 +7,7 @@ const ROUNDS = 3
 
 module.exports = async (req, res) => {
 
-    const ip = req.haeders['x-vercel-forwarded-for']
+    const ip = req.headers['x-vercel-forwarded-for']
     const user_agent = req.headers['user-agent']
     const for_institution = req.body['for_institution']
     const rating = parseInt(req.body['rating'])
