@@ -25,7 +25,6 @@ const Layout = ({ children, header = false }) => {
                 <Header />
             ) : null}
             <div className="container">
-                <googleAnalytics />
                 {children}
             </div>
 
