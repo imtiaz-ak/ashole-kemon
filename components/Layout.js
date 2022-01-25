@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Header from './Header';
+import googleAnalytics from '../utils/googleAnalytics';
 
 const Layout = ({ children, header = false }) => {
     return (
@@ -24,6 +25,7 @@ const Layout = ({ children, header = false }) => {
                 <Header />
             ) : null}
             <div className="container">
+                <googleAnalytics />
                 {children}
             </div>
 
